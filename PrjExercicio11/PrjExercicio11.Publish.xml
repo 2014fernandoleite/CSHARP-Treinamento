@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<publishData>
+  <publishProfile publishUrl="C:\inetpub\wwwroot\PrjExercicio11" deleteExistingFiles="True" ftpAnonymousLogin="False" ftpPassiveMode="True" msdeploySite="" msdeploySiteID="" msdeployRemoteSitePhysicalPath="" msdeployAllowUntrustedCertificate="False" msdeploySkipExtraFilesOnServer="True" msdeployMarkAsApp="False" profileName="Profile1" publishMethod="FileSystem" replaceMatchingFiles="False" userName="" savePWD="False" userPWD="" SelectedForPublish="True">
+    <file relUrl="bin/PrjExercicio11.pdb" publishTime="02/27/2014 09:54:34" />
+    <file relUrl="wsPais.asmx" publishTime="02/01/2014 10:08:32" />
+    <file relUrl="bin/PrjExercicio10.pdb" publishTime="02/27/2014 09:54:31" />
+    <file relUrl="bin/PrjExercicio10.dll" publishTime="02/27/2014 09:54:31" />
+    <file relUrl="Web.config" publishTime="02/27/2014 10:02:31" />
+    <file relUrl="bin/PrjExercicio11.dll" publishTime="02/27/2014 09:54:34" />
+  </publishProfile>
+</publishData>

@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<publishData>
+  <publishProfile publishUrl="C:\inetpub\wwwroot\PrjExercicio12\" deleteExistingFiles="True" ftpAnonymousLogin="False" ftpPassiveMode="True" msdeploySite="" msdeploySiteID="" msdeployRemoteSitePhysicalPath="" msdeployAllowUntrustedCertificate="False" msdeploySkipExtraFilesOnServer="True" msdeployMarkAsApp="False" profileName="Profile1" publishMethod="FileSystem" replaceMatchingFiles="False" userName="" savePWD="False" userPWD="" SelectedForPublish="True">
+    <file relUrl="seguro/PaisWS.aspx" publishTime="02/01/2014 13:06:53" />
+    <file relUrl="bin/PrjExercicio12.dll" publishTime="02/27/2014 09:54:35" />
+    <file relUrl="bin/PrjExercicio10.pdb" publishTime="02/27/2014 09:54:31" />
+    <file relUrl="bin/PrjExercicio10.dll" publishTime="02/27/2014 09:54:31" />
+    <file relUrl="bin/PrjExercicio12.pdb" publishTime="02/27/2014 09:54:35" />
+    <file relUrl="seguro/menu.ascx" publishTime="02/01/2014 13:06:03" />
+    <file relUrl="Web.config" publishTime="02/27/2014 10:02:41" />
+    <file relUrl="seguro/PaisDB.aspx" publishTime="02/01/2014 13:06:54" />
+    <file relUrl="default.aspx" publishTime="02/01/2014 12:28:28" />
+  </publishProfile>
+</publishData>

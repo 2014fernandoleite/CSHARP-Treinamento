@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="wmIncluir">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="clsPais" nillable="true" type="tns:clsPais" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="clsPais">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="CdPais" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="DsPais" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="wmIncluirResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="wmAtualizar">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="clsPais" nillable="true" type="tns:clsPais" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="wmAtualizarResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="wmExcluir">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="clsPais" nillable="true" type="tns:clsPais" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="wmExcluirResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="wmSelecionar">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="clsPais" nillable="true" type="tns:clsPais" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="wmSelecionarResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="wmSelecionarResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="wmIncluirSoapIn">
+    <wsdl:part name="parameters" element="tns:wmIncluir" />
+  </wsdl:message>
+  <wsdl:message name="wmIncluirSoapOut">
+    <wsdl:part name="parameters" element="tns:wmIncluirResponse" />
+  </wsdl:message>
+  <wsdl:message name="wmAtualizarSoapIn">
+    <wsdl:part name="parameters" element="tns:wmAtualizar" />
+  </wsdl:message>
+  <wsdl:message name="wmAtualizarSoapOut">
+    <wsdl:part name="parameters" element="tns:wmAtualizarResponse" />
+  </wsdl:message>
+  <wsdl:message name="wmExcluirSoapIn">
+    <wsdl:part name="parameters" element="tns:wmExcluir" />
+  </wsdl:message>
+  <wsdl:message name="wmExcluirSoapOut">
+    <wsdl:part name="parameters" element="tns:wmExcluirResponse" />
+  </wsdl:message>
+  <wsdl:message name="wmSelecionarSoapIn">
+    <wsdl:part name="parameters" element="tns:wmSelecionar" />
+  </wsdl:message>
+  <wsdl:message name="wmSelecionarSoapOut">
+    <wsdl:part name="parameters" element="tns:wmSelecionarResponse" />
+  </wsdl:message>
+  <wsdl:portType name="wsPaisSoap">
+    <wsdl:operation name="wmIncluir">
+      <wsdl:input message="tns:wmIncluirSoapIn" />
+      <wsdl:output message="tns:wmIncluirSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="wmAtualizar">
+      <wsdl:input message="tns:wmAtualizarSoapIn" />
+      <wsdl:output message="tns:wmAtualizarSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="wmExcluir">
+      <wsdl:input message="tns:wmExcluirSoapIn" />
+      <wsdl:output message="tns:wmExcluirSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="wmSelecionar">
+      <wsdl:input message="tns:wmSelecionarSoapIn" />
+      <wsdl:output message="tns:wmSelecionarSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="wsPaisSoap" type="tns:wsPaisSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="wmIncluir">
+      <soap:operation soapAction="http://tempuri.org/wmIncluir" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="wmAtualizar">
+      <soap:operation soapAction="http://tempuri.org/wmAtualizar" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="wmExcluir">
+      <soap:operation soapAction="http://tempuri.org/wmExcluir" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="wmSelecionar">
+      <soap:operation soapAction="http://tempuri.org/wmSelecionar" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="wsPaisSoap12" type="tns:wsPaisSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="wmIncluir">
+      <soap12:operation soapAction="http://tempuri.org/wmIncluir" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="wmAtualizar">
+      <soap12:operation soapAction="http://tempuri.org/wmAtualizar" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="wmExcluir">
+      <soap12:operation soapAction="http://tempuri.org/wmExcluir" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="wmSelecionar">
+      <soap12:operation soapAction="http://tempuri.org/wmSelecionar" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="wsPais">
+    <wsdl:port name="wsPaisSoap" binding="tns:wsPaisSoap">
+      <soap:address location="http://localhost:55837/wsPais.asmx" />
+    </wsdl:port>
+    <wsdl:port name="wsPaisSoap12" binding="tns:wsPaisSoap12">
+      <soap12:address location="http://localhost:55837/wsPais.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
